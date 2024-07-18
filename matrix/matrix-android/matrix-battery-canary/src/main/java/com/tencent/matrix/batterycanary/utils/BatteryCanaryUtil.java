@@ -343,12 +343,14 @@ public final class BatteryCanaryUtil {
         for (int i = 0; i < cpuCoreNum; i++) {
             output[i] = 0;
             String path = "/sys/devices/system/cpu/cpu" + i + "/cpufreq/scaling_cur_freq";
-            String cat = cat(path);
-            if (!TextUtils.isEmpty(cat)) {
-                try {
-                    //noinspection ConstantConditions
-                    output[i] = Integer.parseInt(cat) / 1000;
-                } catch (Exception ignored) {
+            if (new File(path).exists()) {
+                String cat = cat(path);
+                if (!TextUtils.isEmpty(cat)) {
+                    try {
+                        //noinspection ConstantConditions
+                        output[i] = Integer.parseInt(cat) / 1000;
+                    } catch (Exception ignored) {
+                    }
                 }
             }
         }
