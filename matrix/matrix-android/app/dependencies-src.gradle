@@ -10,7 +10,7 @@ dependencies {
             "matrix-resource-canary:matrix-resource-canary-android",
             "matrix-resource-canary:matrix-resource-canary-common",
             "matrix-io-canary",
-            "matrix-sqlite-lint:matrix-sqlite-lint-android-sdk",
+//            "matrix-sqlite-lint:matrix-sqlite-lint-android-sdk",
             "matrix-hooks",
             "matrix-fd",
             "matrix-mallctl",
@@ -26,6 +26,7 @@ dependencies {
 //            implementation group: "com.tencent.matrix", name: moduleName, version: MATRIX_VERSION, changing: true
 //        }
     }
+    implementation group: "com.tencent.matrix", name: "matrix-sqlite-lint-android-sdk", version: MATRIX_VERSION, changing: true
 
     // releaseImplementation group: "com.tencent.matrix", name: "matrix-sqlite-lint-android-sdk-no-op", version: MATRIX_VERSION, changing: true
     implementation "androidx.appcompat:appcompat:1.1.0"

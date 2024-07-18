@@ -15,8 +15,8 @@ configurations.all {
 }
 
 android {
-    compileSdkVersion 29
-    buildToolsVersion "29.0.3"
+    compileSdkVersion 31
+    buildToolsVersion "29.0.2"
 
     signingConfigs {
         debug {
@@ -116,6 +116,11 @@ android {
         }
     }
 
+}
+
+dependencies {
+    implementation project(':libkt')
+    implementation 'com.tencent:mmkv:1.2.11'
 }
 
 configurations {
