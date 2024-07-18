@@ -15,6 +15,11 @@ buildscript {
         classpath 'com.android.tools.build:gradle:4.1.0'
         classpath 'digital.wup:android-maven-publish:3.6.2'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$gradle.KOTLIN_VERSION"
+        classpath  'com.google.gradle:osdetector-gradle-plugin:1.6.0'
+        classpath ("com.tencent.matrix:matrix-gradle-plugin:${MATRIX_VERSION}") {
+            changing = true
+            exclude group: 'com.android.tools.build', module: 'gradle'
+        }
     }
 
 }

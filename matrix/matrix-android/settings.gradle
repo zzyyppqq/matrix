@@ -3,6 +3,10 @@ apply from: "$rootDir/gradle/Arguments.gradle"
 // Gradle plugin
 include ':matrix-gradle-plugin'
 
+// app
+include ':app'
+include ':libkt'
+
 // Components
 include ':matrix-android-commons'
 include ':matrix-android-lib'
@@ -41,3 +45,5 @@ if (gradle.staticLinkCXX()) {
     include ':matrix-opengl-leak:cxx-static'
     include ':matrix-backtrace:cxx-static'
 }
+include ':app'
+include ':libkt'
